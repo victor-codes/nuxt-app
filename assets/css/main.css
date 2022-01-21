@@ -1,0 +1,131 @@
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 40px auto;
+  column-count: 2;
+  column-gap: 32px;
+}
+
+.container a img {
+  width: 100%;
+  height: auto;
+}
+.container a {
+  display: block;
+  margin-bottom: 32px;
+}
+.heading_1 {
+  position: fixed;
+  bottom: 0px;
+  line-height: 11rem;
+  color: #f9f9f9;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  font-size: 14rem;
+  z-index: 10;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+.main .img {
+  width: 100%;
+  max-width: 600px;
+}
+.info {
+  width: 100%;
+  max-width: 800px;
+  padding: 136px 0 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 40px;
+}
+
+.info h2 {
+  margin: 0;
+  color: #333;
+  font-size: 4vw;
+}
+.info p {
+  margin: 0;
+  color: #666;
+  font-size: 2vw;
+}
+
+.back {
+  position: fixed;
+  right: 56px;
+  top: 56px;
+  display: -moz-box;
+  display: flex;
+  font-size: 3vw;
+  font-size: clamp(1rem, 3vw, 2.5rem);
+  color: rgba(51, 51, 51, 0.7);
+}
+.back a {
+  color: rgba(51, 51, 51, 0.7);
+  text-decoration: none;
+}
+* {
+  box-sizing: border-box;
+}
+.mask {
+  overflow: hidden;
+  transition: all 500ms cubic-bezier(0.43, 0.13, 0.23, 0.96);
+}
+.mask img {
+  transition: all 500ms cubic-bezier(0.43, 0.13, 0.23, 0.96);
+}
+
+.mask:hover {
+  transform: scale(0.95);
+}
+.mask:hover img {
+  transform: scale(1.1);
+}
+.single_image {
+  width: 100%;
+  height: 100%;
+}
+
+.next {
+  font-size: clamp(1rem, 2vw, 2.25rem);
+  color: rgba(51, 51, 51, 0.7);
+  text-decoration: none;
+  opacity: 1;
+  transition: opacity 500ms cubic-bezier(0.43, 0.13, 0.23, 0.96);
+}
+
+.next span {
+  display: inline-block;
+  transform: rotate(-180deg);
+}
+
+.next_image {
+  object-fit: cover;
+  width: 200px;
+  height: 240px;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 500ms cubic-bezier(0.43, 0.13, 0.23, 0.96);
+}
+.next_container {
+  overflow: hidden;
+}
+.next_container:hover .next_image {
+  opacity: 1;
+  transform: translateY(16%);
+}.next_container:hover .next {
+  opacity: 0;
+}
